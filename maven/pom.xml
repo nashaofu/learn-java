@@ -15,12 +15,21 @@
     <maven.compiler.source>13</maven.compiler.source>
     <maven.compiler.target>13</maven.compiler.target>
   </properties>
-
+  <dependencies>
+    <!-- 在这里添加你的依赖 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>  <!-- 库名称，也可以自定义 -->
+      <artifactId>junit-jupiter-api</artifactId>    <!--库名称，也可以自定义-->
+      <version>5.6.0</version> <!--版本号-->
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version> <!--版本号-->
         <executions>
           <execution>
             <phase>package</phase>
